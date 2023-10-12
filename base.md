@@ -44,7 +44,17 @@ const (
   s = iota // 6
   t // 7
 )
-
 // 每次 const 都会初始化 iota
+
+
+// 匿名变量
+func a() (int, bool) {
+  return 0, false
+}
+_r1, ok := a()
+// 可以不使用 r1
+if (ok) {
+  // todo
+}
 ```
 ## 基础数据类型
