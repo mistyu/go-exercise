@@ -80,6 +80,32 @@ float64 // 64 位浮点型数
 /**
  * 其他
  */
-byte 等于 uint8
-rune 等于 int32
+byte 等于 uint8 // 用于存放字符的 ACII 值
+rune 等于 int32 // 用于存放字符如 汉子/日文/韩文等
+```
+
+### 类型转换
+```go
+var a int8 = 12
+var b = uint8(a)
+
+var f float32 = 3.14
+var c = int32(f)
+
+var f64 = float64(a)
+
+// 字符串转数字
+var str = "12"
+myint, err := strconv.Atoi(str)
+if err != nil {
+
+}
+
+// 数字转字符串
+var myInt = 12
+var str = strconv.Itoa(myInt)
+
+// 字符串转 float32 、bool
+strconv.ParseFloat("3.1415", 32)
+strconv.ParseBool("true")
 ```
