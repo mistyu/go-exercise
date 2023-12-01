@@ -109,3 +109,52 @@ var str = strconv.Itoa(myInt)
 strconv.ParseFloat("3.1415", 32)
 strconv.ParseBool("true")
 ```
+
+## 数组
+### 切片
+```go
+var courses []string
+courses = append(courses, "go")
+courses = append(courses, "js")
+courses = append(courses, "rust")
+courses = append(courses, "dart")
+
+// 初始化切片
+// 1. 从数组直接创建
+allCourses := []string{"go", "js", "rust", "dart"}
+course1 := allCourses[0:2] // ["go", "js"]
+
+// 2. 使用 string{}
+courses2 := []string{"go", "js", "rust", "dart"}
+
+// 3. make
+courses3 := make([]string, 4)
+courses3[0] = "go"
+
+
+// 本质上是值传递
+data := []int{1, 2, 3, 4, 5, 6, 7, 8, 9, 10}
+a1 := data[1:6]
+a2 := data[2:7]
+
+// 扩容之后就会复制一份断开之前的引用
+s2 := append(s2, 1, 2, 3,4 ,5 ,6, 7, 8, 9, 1, 1, 1)
+s2[0] = 11
+
+fmt.Println(s2) // [11, 4, 5, 6, 7, 8, 9, 1, 1, 1]
+fmt.Println(s1) // [2, 3, 4, 5, 6]
+```
+
+## Map
+```go
+// 初始化一个map
+map1 := map[string]string{}
+map["go"] = "go map"
+
+map2 := make(map[string]string, 3)
+```
+
+## List(链表)
+```go
+var myList list.List
+```
