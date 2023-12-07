@@ -158,3 +158,7 @@ map2 := make(map[string]string, 3)
 ```go
 var myList list.List
 ```
+
+## package
+用来组织源码，是多个 go 源码的结合，代码复用的基础，fmt, os, io
+每个源码文件开始都必须要申明所属的 package
